@@ -82,7 +82,7 @@ This will compile the TypeScript code and start the application using the compil
 
 **1. Creating single edge:**
 
-You can make a POST request to the below endpoint:
+You can make a POST request to the below endpoint using the below body template:
 
 **http://localhost:3000/edges**
 
