@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type EdgeDTO {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  capacity: Float!
+  node1Alias: String!
+  node2Alias: String!
+  edgePeers: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  getEdges: [EdgeDTO!]!
+  getEdge(id: String!): EdgeDTO!
+}
+
+type Mutation {
+  createEdge(createEdgeInput: CreateEdgeInput!): EdgeDTO!
+}
+
+input CreateEdgeInput {
+  node1Alias: String!
+  node2Alias: String!
+  capacity: Float!
+}
